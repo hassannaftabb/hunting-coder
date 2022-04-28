@@ -13,8 +13,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16.x 
-      - name: npm install command
-        run: cd hunting-coder && npm install
       - name: Run build command
         run: cd hunting-coder && npm run build
       - run: npm run export  
