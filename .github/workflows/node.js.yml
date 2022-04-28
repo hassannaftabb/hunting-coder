@@ -29,6 +29,9 @@ jobs:
     - run: npm ci
     - run: npm run build
     - run: npm run export
+    - name: Install rsync 📚
+      run: |
+        apt-get update && apt-get install -y rsync
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4.3.3
       with:
